@@ -1,11 +1,12 @@
+import AppointmentList from "../components/AppointmentList"
 import Doctors from "../components/Doctors"
 
 const Home = ({appointmentData, doctorData}) => {
-    console.log(doctorData)
   return (
     <div>
-        {/* <h1>MİLLET HOSPİTAL</h1> */}
+        <h1 className="text-center my-5">YKSL HOSPITAL</h1>
         <Doctors appointmentData={appointmentData} doctorData={doctorData}/>
+        <AppointmentList/>
     </div>
   )
 }
