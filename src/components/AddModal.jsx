@@ -1,17 +1,29 @@
-const AddModal = () => {
-  return (
-    <div>
-        <form action="">
-            <label htmlFor="name">Patient Name</label>
-            <input type="text" name="name" id="name" />
-            <label htmlFor="date"></label>
-            <input type="date" name="date" id="date" />
-            <button type="submit">Save</button>
-            <button type="reset">Close</button>
-        
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
-        </form>
-    </div>
+const AddModal = ({ doctorName, setShowModal }) => {
+  return (
+    <Form className='container'>
+      <h3>Appointment for {doctorName}</h3>
+      <Form.Group className="mb-3" controlId="name">
+        <Form.Label>Patient Name</Form.Label>
+        <Form.Control type="text" placeholder="Enter name" />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="date">
+        <Form.Label>Date</Form.Label>
+        <Form.Control type="date" placeholder="Password" />
+      </Form.Group>
+      
+      <Button variant="success mx-2" type="submit">
+        Submit
+      </Button>
+
+      <Button variant="danger" type="button" onClick={() => setShowModal(false)}>
+        Close
+      </Button>
+    </Form>
+    
   )
 }
 
