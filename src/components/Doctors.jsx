@@ -13,8 +13,8 @@ const Doctors = ({ appointmentData, doctorData }) => {
   return !showModal ? (
     <div className="doctors-container">
       {doctorData.map((doctor) => (
-        <div key={doctor.id} className="doctor-card" onClick={() => handleModal(doctor.name)}>
-          <img src={doctor.img} alt={doctor.name} />
+        <div key={doctor.id} className="doctor-card" >
+          <img src={doctor.img} alt={doctor.name} onClick={() => handleModal(doctor.name)} />
           <h3>{doctor.name}</h3>
           <h4>{doctor.dep}</h4>
         </div>

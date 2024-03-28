@@ -4,7 +4,7 @@ const Home = ({appointmentData, doctorData}) => {
     console.log(doctorData)
   return (
     <div>
-        <h1>MİLLET HOSPİTAL</h1>
+        {/* <h1>MİLLET HOSPİTAL</h1> */}
         <Doctors appointmentData={appointmentData} doctorData={doctorData}/>
     </div>
   )
