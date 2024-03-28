@@ -1,11 +1,10 @@
+import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import { useState } from 'react';
 
-const AddModal = ({ doctorName, setShowModal, showModal }) => {
+const AddModal = ({ doctorName, setShowModal, showModal, setAppointments, appointments }) => {
+  const [patientName, setPatientName] = useState("");
+  const [date, setDate] = useState("");
 
-  let [patientName, setPatientName] = useState("")
-  let [date, setDate] = useState("")
-  
   const handlePatientName = (e) => {
     setPatientName(e.target.value);
   };
@@ -14,8 +13,16 @@ const AddModal = ({ doctorName, setShowModal, showModal }) => {
     setDate(e.target.value);
   };
 
-  const handleSubmit = (e) => {};
-  // console.log(patientName)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const appointment = {
+      patientName,
+      date,
+      doctorName
+    };
+    setAppointments([...appointments, appointment]);
+    setShowModal(false);
+  };
 
   return (
     <Modal show={showModal} onHide={() => setShowModal(false)}>
