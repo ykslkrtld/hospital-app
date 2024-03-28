@@ -28,7 +28,7 @@ const Doctors = ({ appointmentData, doctorData }) => {
           </div>
         ))}
       </div>
-      <AppointmentList appointments={appointments} />
+      <AppointmentList appointments={appointments} setAppointments={setAppointments} />
       {showModal && (
         <AddModal
           doctorName={selectedDoctor}
