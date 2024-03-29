@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AddModal from './AddModal';
 import AppointmentList from './AppointmentList';
 
 const Doctors = ({ appointmentData, doctorData }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState("");
-  const [appointments, setAppointments] = useState([]);
+  const [appointments, setAppointments] = useState(() => {
+    // Sayfa yüklendiğinde localStorage'dan appointments verisini al
+    const savedAppointments = localStorage.getItem("appointments");
+    return savedAppointments ? JSON.parse(savedAppointments) : [];
+  });
 
   const handleModal = (doctorName) => {
     setSelectedDoctor(doctorName);
     setShowModal(true);
   };
+
+  useEffect(() => {
+    // appointments her değiştiğinde, bu yeni halini localStorage'a kaydet
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+  }, [appointments]);
 
   return (
     <>
