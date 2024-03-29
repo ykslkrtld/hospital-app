@@ -27,13 +27,12 @@
   display: flex;
   width: 12rem;
   border-radius: 1rem;
-  transition:transform .5s;
+  transition:all .5s;
 }
 
 .doctor-card img:hover{
   cursor: pointer;
   transform: scale(1.05);
-  border: 4px solid fuchsia;
 }
 
 .default-image-container{

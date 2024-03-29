@@ -6,6 +6,7 @@ function AppointmentList({ appointments, setAppointments }) {
     const handleClear = (index) => {
         const updatedAppointments = appointments.filter((item, i) => i !== index);
         setAppointments(updatedAppointments);
+        alert("Are you sure")
       };
 
   return (
