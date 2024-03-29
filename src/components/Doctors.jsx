@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AddModal from './AddModal';
 import AppointmentList from './AppointmentList';
 
-const Doctors = ({ appointmentData, doctorData }) => {
+const Doctors = ({doctorData }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState("");
   const [appointments, setAppointments] = useState(() => {
@@ -37,16 +37,16 @@ const Doctors = ({ appointmentData, doctorData }) => {
           </div>
         ))}
       </div>
-      <AppointmentList appointments={appointments} setAppointments={setAppointments} />
       {showModal && (
         <AddModal
-          doctorName={selectedDoctor}
-          setShowModal={setShowModal}
-          showModal={showModal} 
-          setAppointments={setAppointments}
-          appointments={appointments}
+        doctorName={selectedDoctor}
+        setShowModal={setShowModal}
+        showModal={showModal} 
+        setAppointments={setAppointments}
+        appointments={appointments}
         />
-      )}
+        )}
+        <AppointmentList appointments={appointments} setAppointments={setAppointments} />
     </>
   );
 };
