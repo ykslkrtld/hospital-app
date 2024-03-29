@@ -20,6 +20,7 @@ const AddModal = ({ doctorName, setShowModal, showModal, setAppointments, appoin
       date,
       doctorName
     };
+    console.log(appointments)
     setAppointments([...appointments, appointment]);
     setShowModal(false);
   };
@@ -38,12 +39,13 @@ const AddModal = ({ doctorName, setShowModal, showModal, setAppointments, appoin
               placeholder="Enter name"
               value={patientName}
               onChange={handlePatientName}
+              required
             />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="date">
             <Form.Label>Date</Form.Label>
-            <Form.Control type="datetime-local" onChange={handleDate} value={date} />
+            <Form.Control type="datetime-local" onChange={handleDate} value={date} required/>
           </Form.Group>
 
           <Modal.Footer className="d-flex justify-content-center">

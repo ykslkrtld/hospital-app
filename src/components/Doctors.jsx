@@ -14,7 +14,7 @@ const Doctors = ({ appointmentData, doctorData }) => {
 
   return (
     <>
-      <h2 className="text-center">Our Doctors</h2>
+      <h2 className="title-doctors text-center mb-4">Our Doctors</h2>
       <div className="doctors-container">
         {doctorData.map((doctor) => (
           <div key={doctor.id} className="doctor-card">
@@ -23,8 +23,8 @@ const Doctors = ({ appointmentData, doctorData }) => {
               alt={doctor.name}
               onClick={() => handleModal(doctor.name)}
             />
-            <h3>{doctor.name}</h3>
-            <h4>{doctor.dep}</h4>
+            <h5>{doctor.name}</h5>
+            <p>{doctor.dep}</p>
           </div>
         ))}
       </div>

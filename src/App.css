@@ -1,9 +1,18 @@
+.home-container h1{
+  color:darkorange;
+  font-size: 3rem;
+}
+
+.title-doctors, .title-list{
+  font-size: 2.5rem;
+  color: fuchsia;
+}
+
 .doctors-container{
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  padding: 2rem;
 }
 
 .doctor-card{
@@ -11,9 +20,55 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 3rem;
 }
 
 .doctor-card img{
   display: flex;
-  width: 15rem;
+  width: 12rem;
+  border-radius: 1rem;
+  transition:transform .5s;
 }
+
+.doctor-card img:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  border: 4px solid fuchsia;
+}
+
+.default-image-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.default-image-container img{
+  width: 60%;
+  margin: auto;
+}
+
+.default-image-container p{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.listContainers{
+  width: 90%;
+  margin: auto;
+}
+
+.list-container{
+  background-color: #D0DAE9;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.clear-btn{
+  display: flex;
+  align-items: center;
+}
+
+
