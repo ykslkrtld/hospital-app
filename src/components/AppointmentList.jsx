@@ -19,7 +19,7 @@ function AppointmentList({ appointments, setAppointments }) {
   return (
     <div>
       <h2 className="title-list text-center my-2">Appointment List</h2>
-      <div className="listContainers">
+      <div id="appointments" className="listContainers">
         {appointments.length > 0 ? (
           appointments.map((appointment, index) => (
             <div key={index} onDoubleClick={() => toggleConsulted(index)} className='list-container'>

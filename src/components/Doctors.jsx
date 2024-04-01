@@ -20,9 +20,9 @@ const Doctors = ({doctorData }) => {
   }, [appointments]);
 
   return (
-    <>
+    <div className='ourDoctors'>
       <h2 className="title-doctors text-center mb-4">Our Doctors</h2>
-      <div className="doctors-container">
+      <div id='doctors' className="doctors-container">
         {doctorData.map((doctor) => (
           <div key={doctor.id} className="doctor-card">
             <img
@@ -45,7 +45,7 @@ const Doctors = ({doctorData }) => {
         />
         )}
         <AppointmentList appointments={appointments} setAppointments={setAppointments} />
-    </>
+    </div>
   );
 };
 
