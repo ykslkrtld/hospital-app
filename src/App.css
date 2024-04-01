@@ -1,3 +1,7 @@
+body{
+  background:linear-gradient(to left , rgb(154, 113, 101), rgb(160, 163, 126)) ;
+}
+
 .home-container h1{
   color:darkorange;
   font-size: 3rem;
@@ -53,7 +57,7 @@
 
 .listContainers{
   width: 90%;
-  margin: auto;
+  margin: 2rem auto;
 }
 
 .list-container{
