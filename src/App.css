@@ -57,6 +57,7 @@
 }
 
 .list-container{
+  position: relative;
   background-color: #D0DAE9;
   display: flex;
   justify-content: space-between;
@@ -68,6 +69,18 @@
 .clear-btn{
   display: flex;
   align-items: center;
+}
+
+.consulted{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: darkorange;
+  padding: 0.8rem 2rem 0;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  color: white;
 }
 
 
