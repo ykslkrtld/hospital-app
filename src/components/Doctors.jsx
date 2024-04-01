@@ -6,7 +6,6 @@ const Doctors = ({doctorData }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState("");
   const [appointments, setAppointments] = useState(() => {
-    // Sayfa yüklendiğinde localStorage'dan appointments verisini al
     const savedAppointments = localStorage.getItem("appointments");
     return savedAppointments ? JSON.parse(savedAppointments) : [];
   });
@@ -17,7 +16,6 @@ const Doctors = ({doctorData }) => {
   };
 
   useEffect(() => {
-    // appointments her değiştiğinde, bu yeni halini localStorage'a kaydet
     localStorage.setItem("appointments", JSON.stringify(appointments));
   }, [appointments]);
 

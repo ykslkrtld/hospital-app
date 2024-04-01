@@ -14,7 +14,7 @@ const AddModal = ({ doctorName, setShowModal, showModal, setAppointments, appoin
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const appointment = {
       patientName,
       date,
@@ -22,7 +22,7 @@ const AddModal = ({ doctorName, setShowModal, showModal, setAppointments, appoin
     };
     console.log(appointments)
     setAppointments([...appointments, appointment]);
-    // setShowModal(false);
+    setShowModal(false);
   };
 
   return (
