@@ -8,7 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Home = ({ doctorData }) => {
   return (
-    <div className='home-container'>
+    <div id='home' >
       <Container className='navBar'>
         <Navbar expand="lg" className="banner my-2">
           <Container>
